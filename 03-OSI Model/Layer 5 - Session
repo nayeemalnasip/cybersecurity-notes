@@ -1,0 +1,130 @@
+# Layer 5 - Session
+
+## Overview
+
+This task introduced the Session Layer, which is Layer 5 of the OSI Model. The Session Layer is responsible for establishing, maintaining, and terminating communication sessions between devices. It ensures that connections remain active while data is being exchanged and manages session recovery through checkpoints.
+
+---
+
+## Objectives
+
+* Understand the purpose of the Session Layer.
+* Learn how sessions are established between devices.
+* Understand session management and maintenance.
+* Learn the role of checkpoints in communication.
+* Understand how sessions are terminated.
+
+---
+
+## Tools Used
+
+* No tools were used in this task.
+
+---
+
+## Methodology / Steps
+
+### 1. Understanding the Session Layer
+
+The Session Layer is Layer 5 of the OSI Model.
+
+After data has been processed by the Presentation Layer, the Session Layer is responsible for creating and managing communication sessions between devices.
+
+A session represents an active connection between two systems.
+
+---
+
+### 2. Session Establishment
+
+Before data can be exchanged, a connection must be established between communicating devices.
+
+When the connection is successfully created:
+
+* A session is established.
+* Communication between devices can begin.
+* Data is transmitted through the active session.
+
+---
+
+### 3. Session Maintenance
+
+While communication is ongoing, the Session Layer maintains the connection.
+
+Responsibilities include:
+
+* Keeping the session active.
+* Managing communication between devices.
+* Monitoring the session status.
+
+As long as the connection remains active, the session also remains active.
+
+---
+
+### 4. Session Termination
+
+The Session Layer is responsible for closing sessions when they are no longer needed.
+
+A session may be terminated when:
+
+* The connection is inactive for a period of time.
+* The connection is lost.
+* Communication is completed.
+
+This helps free network and system resources.
+
+---
+
+### 5. Session Checkpoints
+
+The Session Layer can create checkpoints during communication.
+
+Purpose:
+
+* Allow communication to resume from a specific point.
+* Reduce the amount of data that must be retransmitted.
+
+If data is lost during transmission:
+
+* Communication can continue from the latest checkpoint.
+* Only the missing data needs to be resent.
+
+This improves efficiency and conserves bandwidth.
+
+---
+
+### 6. Session Uniqueness
+
+Each session is unique.
+
+Important concept:
+
+* Data belongs to a specific session.
+* Data cannot move between different sessions.
+* Communication occurs only within the session that was established.
+
+This ensures organized and controlled communication between devices.
+
+---
+
+## Commands
+
+No commands were used in this task.
+
+---
+
+## Key Findings / Notes
+
+* The Session Layer is Layer 5 of the OSI Model.
+* It establishes communication sessions between devices.
+* Sessions remain active while connections are active.
+* The Session Layer maintains and monitors active connections.
+* It terminates sessions when connections are lost or inactive.
+* Checkpoints help recover communication efficiently.
+* Only missing data needs to be retransmitted after a checkpoint.
+* Every session is unique and independent.
+
+---
+
+## Learning Outcome
+
+After completing this task, I understood how the Session Layer establishes, maintains, and terminates communication sessions between devices. I also learned how session checkpoints improve efficiency by allowing communication to resume from specific points instead of retransmitting all data.

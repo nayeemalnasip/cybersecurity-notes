@@ -1,0 +1,131 @@
+# Layer 6 - Presentation
+
+## Overview
+
+This task introduced the Presentation Layer, which is Layer 6 of the OSI Model. The Presentation Layer is responsible for data translation, formatting, and standardization between applications. It ensures that data sent from one system can be properly understood by another system, regardless of the software being used. This layer is also responsible for security functions such as data encryption.
+
+---
+
+## Objectives
+
+* Understand the purpose of the Presentation Layer.
+* Learn how data standardization works.
+* Understand the role of data translation.
+* Learn how different applications exchange data consistently.
+* Understand the role of encryption at this layer.
+
+---
+
+## Tools Used
+
+* No tools were used in this task.
+
+---
+
+## Methodology / Steps
+
+### 1. Understanding the Presentation Layer
+
+The Presentation Layer is Layer 6 of the OSI Model.
+
+Its primary role is to ensure that data is presented in a format that both the sending and receiving systems can understand.
+
+This layer acts as a translator between applications and the lower network layers.
+
+---
+
+### 2. Data Standardization
+
+Different software applications may store and process data in different ways.
+
+The Presentation Layer ensures:
+
+* Data follows a common format.
+* Different applications can communicate successfully.
+* Information remains consistent across systems.
+
+This standardization allows interoperability between different software products.
+
+---
+
+### 3. Data Translation
+
+The Presentation Layer translates data between systems when necessary.
+
+Purpose:
+
+* Convert data into a format understood by the receiving application.
+* Ensure compatibility between different software implementations.
+
+Example:
+
+A user sends an email using one email client while the recipient uses a different email client. The Presentation Layer ensures that the email content is displayed correctly on both systems.
+
+---
+
+### 4. Communication Process
+
+The communication process at the Presentation Layer follows these steps:
+
+1. Data is received from the Application Layer.
+2. Data is translated into a standardized format.
+3. Data is prepared for transmission through lower layers.
+4. The receiving device translates the data back into a format understood by the destination application.
+
+---
+
+### 5. Encryption and Security
+
+The Presentation Layer is responsible for applying security-related transformations to data.
+
+One important function is:
+
+* Data Encryption
+
+Encryption helps protect information while it is being transmitted across a network.
+
+Example:
+
+```text
+HTTPS
+```
+
+When accessing a secure website using HTTPS, encryption is used to protect data exchanged between the user and the website.
+
+---
+
+### 6. Importance of the Presentation Layer
+
+The Presentation Layer ensures:
+
+* Data consistency.
+* Application compatibility.
+* Proper data interpretation.
+* Secure communication through encryption.
+
+Without this layer, different applications might not be able to understand exchanged data correctly.
+
+---
+
+## Commands
+
+No commands were used in this task.
+
+---
+
+## Key Findings / Notes
+
+* The Presentation Layer is Layer 6 of the OSI Model.
+* It acts as a translator between applications and network services.
+* Responsible for data formatting and standardization.
+* Ensures compatibility between different software applications.
+* Translates data into a common format.
+* Handles encryption and security functions.
+* HTTPS encryption is an example of functionality provided at this layer.
+* Helps maintain consistent communication between systems.
+
+---
+
+## Learning Outcome
+
+After completing this task, I understood how the Presentation Layer standardizes and translates data between different applications. I also learned how encryption protects transmitted data and how this layer ensures compatibility between software running on different systems.

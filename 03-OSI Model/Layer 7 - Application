@@ -1,0 +1,133 @@
+# Layer 7 - Application
+
+## Overview
+
+This task introduced the Application Layer, which is Layer 7 and the highest layer of the OSI Model. The Application Layer is the closest layer to the end user and provides the protocols, services, and interfaces that allow users to interact with networked applications and data.
+
+---
+
+## Objectives
+
+* Understand the purpose of the Application Layer.
+* Learn how users interact with network services.
+* Identify common applications that operate at this layer.
+* Understand the role of application protocols.
+* Learn how DNS supports network communication.
+
+---
+
+## Tools Used
+
+* No tools were used in this task.
+
+---
+
+## Methodology / Steps
+
+### 1. Understanding the Application Layer
+
+The Application Layer is Layer 7 of the OSI Model and serves as the interface between users and network services.
+
+It provides the protocols and rules that determine how applications send and receive data across a network.
+
+This is the layer that users interact with directly through software applications.
+
+---
+
+### 2. User Interaction
+
+The Application Layer allows users to access and utilize network resources through applications with user-friendly interfaces.
+
+Examples include:
+
+* Sending Emails
+* Browsing Websites
+* Accessing File Servers
+* Downloading Files
+
+Users interact with these services without needing to understand the lower networking layers.
+
+---
+
+### 3. Graphical User Interfaces (GUI)
+
+Many applications at this layer provide a Graphical User Interface (GUI) to simplify interaction with network services.
+
+Examples:
+
+* Email Clients
+* Web Browsers
+* File Transfer Applications
+
+These interfaces make network communication accessible and easy to use.
+
+---
+
+### 4. Common Application Layer Services
+
+Examples of applications and services operating at this layer include:
+
+* Email Clients
+* Web Browsers
+* FileZilla
+* File Server Browsing Tools
+
+These applications rely on underlying network protocols to exchange information.
+
+---
+
+### 5. Domain Name System (DNS)
+
+One important protocol associated with the Application Layer is DNS (Domain Name System).
+
+Purpose:
+
+* Convert domain names into IP addresses.
+* Help users access websites using readable names instead of numerical addresses.
+
+Example:
+
+```text
+www.example.com
+        ↓
+192.168.1.100
+```
+
+DNS simplifies navigation and communication across networks.
+
+---
+
+### 6. Communication Process
+
+The Application Layer communication process follows these steps:
+
+1. A user interacts with an application.
+2. The application generates a request.
+3. Application Layer protocols process the request.
+4. Data is passed to the lower OSI layers for transmission.
+5. Responses are returned to the user through the application.
+
+---
+
+## Commands
+
+No commands were used in this task.
+
+---
+
+## Key Findings / Notes
+
+* The Application Layer is Layer 7 of the OSI Model.
+* It is the highest layer in the OSI framework.
+* Users interact directly with this layer.
+* Provides access to network services and resources.
+* Supports applications such as browsers and email clients.
+* Uses application-level protocols to facilitate communication.
+* DNS translates domain names into IP addresses.
+* GUIs make network services accessible to end users.
+
+---
+
+## Learning Outcome
+
+After completing this task, I understood how the Application Layer provides the interface between users and network services. I learned how common applications communicate over networks, the role of application protocols, and how DNS translates domain names into IP addresses to support user-friendly network communication.
