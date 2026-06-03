@@ -1,0 +1,388 @@
+# HTTP Fundamentals
+
+## Cookies
+
+### Overview
+
+Cookies are small pieces of data stored on a user's device by a web browser.
+
+They are used to help websites remember information about users between different HTTP requests.
+
+Since HTTP is a stateless protocol, web servers do not automatically remember previous interactions with a user. Cookies solve this problem by storing information that can be sent back to the server with every future request.
+
+---
+
+## What is a Cookie?
+
+A cookie is a small text-based piece of data that a web server sends to a browser.
+
+The server sends cookies using the:
+
+```http
+Set-Cookie
+```
+
+response header.
+
+The browser stores this information and automatically sends it back to the server in future requests using the:
+
+```http
+Cookie
+```
+
+request header.
+
+---
+
+## Why Cookies Are Needed
+
+HTTP is:
+
+```text
+Stateless
+```
+
+This means:
+
+* The server does not remember previous requests.
+* Every request appears as a completely new connection.
+* User identity would be lost after every page visit.
+
+Cookies allow websites to maintain state between requests.
+
+---
+
+## How Cookies Work
+
+### Step 1: User Visits a Website
+
+Browser sends a request:
+
+```http
+GET / HTTP/1.1
+Host: website.com
+```
+
+---
+
+### Step 2: Server Creates a Cookie
+
+Server responds:
+
+```http
+HTTP/1.1 200 OK
+Set-Cookie: sessionid=abc123xyz
+```
+
+The browser stores:
+
+```text
+sessionid=abc123xyz
+```
+
+---
+
+### Step 3: Future Requests
+
+Whenever the user visits another page on the same website:
+
+```http
+GET /profile HTTP/1.1
+Host: website.com
+Cookie: sessionid=abc123xyz
+```
+
+The server recognizes the user through the cookie.
+
+---
+
+## Authentication and Cookies
+
+One of the most common uses of cookies is:
+
+```text
+User Authentication
+```
+
+After login:
+
+```text
+Username + Password
+        ↓
+Server verifies credentials
+        ↓
+Session Cookie Generated
+        ↓
+Browser Stores Cookie
+        ↓
+Future Requests Use Cookie
+```
+
+This prevents users from having to log in on every page.
+
+---
+
+## Cookie Tokens
+
+Cookies typically do not contain:
+
+```text
+Passwords
+```
+
+Instead, they contain:
+
+```text
+Session Tokens
+```
+
+Example:
+
+```text
+sessionid=7a91bcde4f8273a
+```
+
+A session token acts as a unique identifier that links the user to their active session on the server.
+
+---
+
+## Common Uses of Cookies
+
+### Authentication
+
+Remember logged-in users.
+
+Example:
+
+```text
+Facebook
+LinkedIn
+GitHub
+TryHackMe
+```
+
+---
+
+### User Preferences
+
+Store personalized settings.
+
+Examples:
+
+```text
+Dark Mode
+Language Selection
+Theme Preferences
+```
+
+---
+
+### Shopping Carts
+
+Remember selected items.
+
+Example:
+
+```text
+Amazon Cart
+E-commerce Websites
+```
+
+---
+
+### Tracking and Analytics
+
+Track user behavior.
+
+Examples:
+
+```text
+Visited Pages
+Session Duration
+Advertising Preferences
+```
+
+---
+
+## Cookie Lifecycle
+
+```text
+User Visits Website
+        ↓
+Server Sends Set-Cookie Header
+        ↓
+Browser Stores Cookie
+        ↓
+User Visits Another Page
+        ↓
+Browser Sends Cookie Header
+        ↓
+Server Identifies User
+```
+
+---
+
+## Viewing Cookies in Browser
+
+Modern browsers allow users to inspect cookies through Developer Tools.
+
+### Steps
+
+1. Open Developer Tools
+
+```text
+F12
+```
+
+or
+
+```text
+Right Click → Inspect
+```
+
+---
+
+### Navigate to Network Tab
+
+```text
+Developer Tools
+      ↓
+Network Tab
+```
+
+This displays all requests made by the browser.
+
+---
+
+### Inspect a Request
+
+Select any request and view:
+
+```text
+Headers
+Cookies
+Response
+```
+
+---
+
+### Cookie Information
+
+You can see:
+
+```text
+Cookie Name
+Cookie Value
+Expiration Date
+Domain
+Path
+```
+
+---
+
+## Example Cookie Exchange
+
+### Server Response
+
+```http
+HTTP/1.1 200 OK
+Set-Cookie: sessionid=abc123
+```
+
+### Browser Stores
+
+```text
+sessionid=abc123
+```
+
+### Browser Request
+
+```http
+GET /dashboard HTTP/1.1
+Cookie: sessionid=abc123
+```
+
+### Server Response
+
+```text
+Welcome Back User
+```
+
+---
+
+## Cyber Security Perspective
+
+Cookies are extremely important in web security.
+
+Security professionals often analyze cookies during:
+
+* Web Application Testing
+* Penetration Testing
+* Bug Bounty Hunting
+* Session Management Assessments
+
+---
+
+## Common Cookie Security Risks
+
+### Session Hijacking
+
+Attackers steal session cookies to impersonate users.
+
+---
+
+### Cookie Theft
+
+Malicious scripts may attempt to steal cookies.
+
+---
+
+### Weak Session Tokens
+
+Predictable session identifiers can be guessed by attackers.
+
+---
+
+### Insecure Transmission
+
+Cookies transmitted without encryption can be intercepted.
+
+---
+
+## Security Best Practices
+
+### Use HTTPS
+
+Protects cookies during transmission.
+
+### Secure Flag
+
+Prevents cookies from being sent over unencrypted HTTP.
+
+### HttpOnly Flag
+
+Prevents JavaScript from accessing cookies.
+
+### Strong Session Tokens
+
+Use random and unpredictable identifiers.
+
+---
+
+## Key Notes
+
+* Cookies are small pieces of data stored by browsers.
+* Cookies help websites remember users.
+* HTTP is stateless, and cookies provide state management.
+* Cookies are created using the Set-Cookie header.
+* Browsers return cookies using the Cookie header.
+* Session tokens are commonly stored inside cookies.
+* Cookies are widely used for authentication and personalization.
+* Developers and security professionals can inspect cookies through browser Developer Tools.
+* Cookie security is critical for protecting user accounts and sessions.
+
+---
+
+## Learning Outcome
+
+After completing this section, I understood how cookies enable websites to remember users across multiple HTTP requests. I learned how cookies are created, stored, and transmitted between browsers and web servers, how session-based authentication works, and why cookies are a critical component of both web functionality and cybersecurity.
